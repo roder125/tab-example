@@ -1,0 +1,10 @@
+<div class="tabs-bar">
+  <div class="tab-button" *ngFor="let t of tabs" [ngClass]="{'active': currentPageUrl === t.url}">
+    <a (click)="navToTab(t.url)">
+      <p>{{t.name}}</p>
+    </a>
+  </div>
+</div>
+
+<!-- Router Outlet for nested Modules -->
+<router-outlet></router-outlet>
